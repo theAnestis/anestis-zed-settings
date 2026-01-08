@@ -1,0 +1,73 @@
+{
+  "title_bar": {
+    "show_menus": false,
+    "show_branch_icon": true,
+  },
+  "agent": {
+    "default_profile": "write",
+    "play_sound_when_agent_done": true,
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.5",
+    },
+    "model_parameters": [],
+  },
+  "icon_theme": "Catppuccin Latte",
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 500,
+    },
+  },
+  "base_keymap": "VSCode",
+  "minimap": {
+    "show": "auto",
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Carbonfox",
+  },
+  "format_on_save": "on",
+  "preferred_line_length": 150,
+  "languages": {
+    "Python": {
+      "language_servers": ["basedpyright", "ruff"],
+      "formatter": {
+        "language_server": {
+          "name": "ruff",
+        },
+      },
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+        "source.fixAll.ruff": true,
+      },
+    },
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 150,
+        },
+      },
+    },
+    "basedpyright": {
+      "settings": {
+        "basedpyright.inlayHints": {
+          "variableTypes": true,
+          "functionReturnTypes": true,
+        },
+        "basedpyright.analysis": {
+          "typeCheckingMode": "standard",
+        },
+      },
+    },
+  },
+}
