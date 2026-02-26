@@ -4,9 +4,11 @@
     "show_branch_icon": true,
   },
   "agent": {
+    "tool_permissions": {
+      "default": "allow",
+    },
     "default_profile": "write",
     "play_sound_when_agent_done": true,
-    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4.5",
