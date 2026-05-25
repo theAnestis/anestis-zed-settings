@@ -1,21 +1,55 @@
 {
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry",
+    },
+  },
+  "language_models": {
+    "lmstudio": {
+      "api_url": "http://localhost:1234/api/v0",
+    },
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "git_panel": {
+    "dock": "left",
+    "tree_view": true,
+  },
   "title_bar": {
+    "show_branch_status_icon": true,
     "show_menus": false,
-    "show_branch_icon": true,
   },
   "agent": {
+    "dock": "right",
     "tool_permissions": {
       "default": "allow",
     },
     "default_profile": "write",
-    "play_sound_when_agent_done": true,
+    "play_sound_when_agent_done": "always",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5",
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "google",
+      "model": "gemini-3.1-flash-lite",
     },
     "model_parameters": [],
   },
-  "icon_theme": "Catppuccin Latte",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Latte",
+  },
   "inlay_hints": {
     "enabled": true,
   },
@@ -31,15 +65,14 @@
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "dark",
-    "light": "Ayu Light",
-    "dark": "Carbonfox",
+    "mode": "system",
+    "light": "Carbonfox - blurred",
+    "dark": "Carbonfox - blurred",
   },
   "format_on_save": "on",
-  "preferred_line_length": 150,
   "languages": {
     "Python": {
-      "language_servers": ["basedpyright", "ruff"],
+      "language_servers": ["pyrefly", "ruff"], // "!basedpyright", "pathy", "ruff"],
       "formatter": {
         "language_server": {
           "name": "ruff",
@@ -50,25 +83,15 @@
         "source.organizeImports.ruff": true,
         "source.fixAll.ruff": true,
       },
+      "colorize_brackets": true,
     },
   },
   "lsp": {
-    "ruff": {
-      "initialization_options": {
-        "settings": {
-          "lineLength": 150,
-        },
-      },
-    },
-    "basedpyright": {
+    "pathy": {
       "settings": {
-        "basedpyright.inlayHints": {
-          "variableTypes": true,
-          "functionReturnTypes": true,
-        },
-        "basedpyright.analysis": {
-          "typeCheckingMode": "standard",
-        },
+        "auto_download": true,
+        "release_channel": "stable",
+        "verify_checksum": true,
       },
     },
   },
